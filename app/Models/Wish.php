@@ -29,7 +29,6 @@ class Wish extends Model
      * @var array
      */
     protected $casts = [
-        'isCompleted' => 'boolean',
-        'date' => 'datetime',
+        'isCompleted' => 'boolean'
     ];
 }

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('wishes', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->integer('id')->primary()->autoIncrement();
             $table->string('title');
             $table->string('text');
             $table->boolean('isCompleted')->default(false);

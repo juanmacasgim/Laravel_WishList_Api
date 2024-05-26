@@ -22,11 +22,11 @@ class WishRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id' => 'required|string',
+            'id' => 'integer',
             'title' => 'required|string',
             'text' => 'required|string',
             'isCompleted' => 'required|boolean',
-            'date' => 'required|date',
+            'date' => 'required|string',
         ];
     }
 }
