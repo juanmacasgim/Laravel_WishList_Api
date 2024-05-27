@@ -4,6 +4,11 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class AppServiceProvider
+ * Este es un proveedor de servicios de la aplicación.
+ * Es necesario para poder usar el archivo api.php en la carpeta routes.
+ */
 class AppServiceProvider extends ServiceProvider
 {
     /**

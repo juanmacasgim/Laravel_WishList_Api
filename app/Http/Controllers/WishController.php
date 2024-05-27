@@ -8,6 +8,10 @@ use App\Models\Wish;
 use Illuminate\Http\JsonResponse;
 use Laravel\Prompts\Note;
 
+/**
+ * Class WishController
+ * Esta clase se encarga de manejar las peticiones de la API.
+ */
 class WishController extends Controller
 {
 

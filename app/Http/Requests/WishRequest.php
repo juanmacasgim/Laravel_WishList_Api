@@ -4,6 +4,10 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class WishRequest
+ * Esta clase se encarga de validar los datos que se envían a través de la API.
+ */
 class WishRequest extends FormRequest
 {
     /**

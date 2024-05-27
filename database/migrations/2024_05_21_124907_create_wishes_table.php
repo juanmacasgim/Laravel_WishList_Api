@@ -4,6 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+/**
+ * Class CreateWishesTable
+ * Esta clase se encarga de crear la tabla de deseos.
+ */
+
 return new class extends Migration
 {
     /**
@@ -16,7 +21,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('text');
             $table->boolean('isCompleted')->default(false);
-            $table->dateTime('date');
+            $table->string('date');
             $table->timestamps();
         });
     }
