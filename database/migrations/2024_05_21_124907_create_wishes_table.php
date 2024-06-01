@@ -6,9 +6,8 @@ use Illuminate\Support\Facades\Schema;
 
 /**
  * Class CreateWishesTable
- * Esta clase se encarga de crear la tabla de deseos.
+ * This class represents the migration to create the wishes table in the database.
  */
-
 return new class extends Migration
 {
     /**

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Wish
- * Esta clase se encarga de manejar los datos de los deseos.
+ * This class represents the model of the wishes table in the database.
  */
 class Wish extends Model
 {

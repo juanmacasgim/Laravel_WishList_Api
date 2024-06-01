@@ -1,0 +1,3 @@
+- Refactorizar código
+- Investigar Testing para automatizar tareas
+- Actualizar Web

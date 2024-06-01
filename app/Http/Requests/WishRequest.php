@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 /**
  * Class WishRequest
- * Esta clase se encarga de validar los datos que se envían a través de la API.
+ * This class is responsible for validating the request data.
  */
 class WishRequest extends FormRequest
 {

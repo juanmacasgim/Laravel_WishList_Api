@@ -6,8 +6,8 @@ use Illuminate\Support\ServiceProvider;
 
 /**
  * Class AppServiceProvider
- * Este es un proveedor de servicios de la aplicación.
- * Es necesario para poder usar el archivo api.php en la carpeta routes.
+ * This class is used to register any application services.
+ * Is necessary to register the routes in the boot method.
  */
 class AppServiceProvider extends ServiceProvider
 {
