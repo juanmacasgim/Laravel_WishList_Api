@@ -34,7 +34,10 @@ class WishController extends Controller
      * Display all wishes
      */
     public function index():JsonResponse{
-        return response()->json(Wish::all(), 200);
+        return response()->json([
+            'success' => true,
+            'data' => Wish::all()
+        ], 200);
     }
 
     /**
@@ -48,7 +51,10 @@ class WishController extends Controller
                 'message' => 'Wish not found'
             ], 404);
         }
-        return response()->json($wish, 200);
+        return response()->json([
+            'success' => true,
+            'data' => $wish
+        ], 200);
     }
 
     /**

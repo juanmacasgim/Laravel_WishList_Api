@@ -1,0 +1,15 @@
+{
+    "clientName": "Thunder Client",
+    "environmentName": "wishes",
+    "environmentId": "ed66c15a-c5d4-4651-99eb-51f9a40412e6",
+    "dateExported": "2024-06-03T10:40:01.453Z",
+    "version": "1.2",
+    "envFile": "c:\\Users\\jmcgo\\Desktop\\CFGS DAW\\Desarrollo Web en Entorno Servidor\\WishList_Laravel\\.env.testing",
+    "variables": [
+        {
+            "name": "{{wish.id}}",
+            "value": "0"
+        }
+    ],
+    "ref": "a7pSR2Gd_wUBpd5yHaY1-k0rDRgJSUcZZ9LIPY-ahgH3E5fPG3HM8e8MVwGUvXvP"
+}
