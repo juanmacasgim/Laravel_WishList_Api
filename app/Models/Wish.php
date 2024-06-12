@@ -22,8 +22,10 @@ class Wish extends Model
         'id',
         'title',
         'text',
+        'type',
         'isCompleted',
         'date',
+        'user_id'
     ];
 
 

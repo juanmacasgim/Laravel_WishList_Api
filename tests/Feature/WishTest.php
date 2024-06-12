@@ -23,6 +23,7 @@ class WishTest extends TestCase
                 'id',
                 'title',
                 'text',
+                'type',
                 'isCompleted',
                 'date',
                 'created_at',
@@ -45,6 +46,7 @@ class WishTest extends TestCase
             'id',
             'title',
             'text',
+            'type',
             'isCompleted',
             'date',
             'created_at',
@@ -72,6 +74,7 @@ class WishTest extends TestCase
         $response = $this->post('/api/wishes', [
             'title' => 'Deseo Test 4',
             'text' => 'Deseo Test 4',
+            'type' => 'Tarea',
             'isCompleted' => false,
             'date' => '26/5/2024 22:59:59',
         ]);
@@ -82,6 +85,7 @@ class WishTest extends TestCase
                 'id',
                 'title',
                 'text',
+                'type',
                 'isCompleted',
                 'date',
                 'created_at',
@@ -101,8 +105,9 @@ class WishTest extends TestCase
         $response = $this->put('/api/wishes/4', [
             'title' => 'Deseo Test 4',
             'text' => 'Deseo Test 4 pero actualizado',
+            'type' => 'Tarea',
             'isCompleted' => true,
-            'date' => '2021-12-12',
+            'date' => '26/5/2024 22:59:59'
         ]);
         $response->assertStatus(200);
         $response->assertJsonStructure([
@@ -111,6 +116,7 @@ class WishTest extends TestCase
                 'id',
                 'title',
                 'text',
+                'type',
                 'isCompleted',
                 'date',
                 'created_at',
@@ -129,5 +135,11 @@ class WishTest extends TestCase
     {
         $response = $this->delete('/api/wishes/1');
         $response->assertStatus(200);
+    }
+
+    public function test_delete_wish_not_existing()
+    {
+        $response = $this->delete('/api/wishes/1');
+        $response->assertStatus(404);
     }
 }

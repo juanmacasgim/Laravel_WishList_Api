@@ -18,24 +18,38 @@ class DatabaseTestingSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('users')->insert([
+            [
+                'name' => 'Juanma',
+                'email' => 'juanmacasgim@gmail.com',
+                'password' => bcrypt('juanma123'),
+                'email_verified_at' => '2024-05-26 22:59:59'
+            ]
+        ]);
         DB::table('wishes')->insert([
             [
                 'title' => 'Deseo Test 1',
                 'text' => 'Texto del deseo 1',
                 'isCompleted' => false,
-                "date" => "26/5/2024 22:59:59"
+                'type' => 'Comida',
+                'date' => '26/5/2024 22:59:59',
+                'user_id' => 1
             ],
             [
                 'title' => 'Deseo Test 2',
                 'text' => 'Texto del deseo 2',
                 'isCompleted' => false,
-                "date" => "26/5/2024 22:59:59"
+                'type' => 'Viaje',
+                "date" => "26/5/2024 22:59:59",
+                'user_id' => 1
             ],
             [
                 'title' => 'Deseo Test 3',
                 'text' => 'Texto del deseo 3',
                 'isCompleted' => false,
-                "date" => "26/5/2024 22:59:59"
+                'type' => 'Tarea',
+                "date" => "26/5/2024 22:59:59",
+                'user_id' => 1
             ]
         ]);
     }

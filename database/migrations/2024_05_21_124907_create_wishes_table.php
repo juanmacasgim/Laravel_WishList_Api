@@ -19,7 +19,10 @@ return new class extends Migration
             $table->integer('id')->primary()->autoIncrement();
             $table->string('title');
             $table->string('text');
+            $table->string('type');
             $table->boolean('isCompleted')->default(false);
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('date');
             $table->timestamps();
         });

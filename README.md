@@ -1,3 +1,2 @@
-- Refactorizar código
-- Investigar Testing para automatizar tareas
-- Actualizar Web
+- Login
+- Token autenticacion.

@@ -4,11 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-/**
- * Class WishRequest
- * This class is responsible for validating the request data.
- */
-class WishRequest extends FormRequest
+class LoginRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,13 +22,9 @@ class WishRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id' => 'integer',
-            'title' => 'required|string',
-            'text' => 'required|string',
-            'type' => 'required|string',
-            'isCompleted' => 'required|boolean',
-            'date' => 'required|string',
-            'user_id' => 'integer'
+            'name' => 'string',
+            'email' => 'required|email',
+            'password' => 'required',
         ];
     }
 }
