@@ -14,12 +14,12 @@ use Laravel\Sanctum\PersonalAccessToken;
 class WishController extends Controller
 {
 
-    public function getUserIdFromToken(string $token): ?int
+    /* public function getUserIdFromToken(string $token): ?int
     {
         $accessToken = PersonalAccessToken::findToken($token);
 
         return $accessToken ? $accessToken->tokenable_id : null;
-    }
+    } */
 
     /**
      * Store a new wish
