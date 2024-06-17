@@ -6,17 +6,18 @@ use App\Http\Requests\LoginRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\QueryException;
 
 class LoginController extends Controller
 {
     public function register(LoginRequest $request)
     {
-        $user = User::create($request->validated());
-
-        if (!$user) {
+        try {
+            $user = User::create($request->validated());
+        } catch (QueryException $e) {
             return response()->json([
                 'status' => 0,
-                'message' => 'Register failed',
+                'message' => 'Email already registered',
             ], 400);
         }
 
@@ -46,8 +47,8 @@ class LoginController extends Controller
 
         return response()->json([
             'status' => -1,
-            'message' => 'Unauthenticated',
-        ], 401);
+            'message' => 'Invalid credentials provided',
+        ], 403);
     }
 
     public function logout(Request $request){
